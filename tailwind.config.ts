@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -30,6 +31,14 @@ export default {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -57,6 +66,40 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // News-specific colors
+        "breaking-news": "hsl(var(--breaking-news))",
+        "featured-news": "hsl(var(--featured-news))",
+        "category-world": "hsl(var(--category-world))",
+        "category-business": "hsl(var(--category-business))",
+        "category-tech": "hsl(var(--category-tech))",
+        "category-sports": "hsl(var(--category-sports))",
+        "category-entertainment": "hsl(var(--category-entertainment))",
+        "category-health": "hsl(var(--category-health))",
+        "category-politics": "hsl(var(--category-politics))",
+        "category-science": "hsl(var(--category-science))",
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-card": "var(--gradient-card)",
+        "gradient-news": "var(--gradient-news)",
+      },
+      fontFamily: {
+        heading: "var(--font-heading)",
+        body: "var(--font-body)",
+      },
+      maxWidth: {
+        container: "var(--container-max)",
+      },
+      height: {
+        header: "var(--header-height)",
+      },
+      width: {
+        sidebar: "var(--sidebar-width)",
+      },
+      transitionDuration: {
+        fast: "var(--transition-fast)",
+        normal: "var(--transition-normal)",
+        slow: "var(--transition-slow)",
       },
       borderRadius: {
         lg: "var(--radius)",
