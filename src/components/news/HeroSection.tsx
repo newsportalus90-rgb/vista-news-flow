@@ -86,10 +86,10 @@ export const HeroSection: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 h-full flex items-center justify-center text-center">
           <div className="max-w-4xl text-white">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Welcome to Vista News
+              Welcome to NewsStream
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90">
-              Your trusted source for global news and real-time updates
+              Professional journalism, breaking news, and real-time global updates
             </p>
             <Button size="lg" variant="secondary">
               Explore Latest News
@@ -114,7 +114,7 @@ export const HeroSection: React.FC = () => {
         ) : (
           <img 
             src={heroImage}
-            alt="Vista News"
+            alt="NewsStream"
             className="w-full h-full object-cover"
           />
         )}

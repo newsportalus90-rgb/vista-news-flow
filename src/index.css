@@ -2,36 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Vista News Design System - Professional news portal styling
-All colors MUST be HSL. News-focused color palette and typography.
+/* NewsStream Design System - Premium news portal styling
+All colors MUST be HSL. Professional BBC/Reuters inspired design.
 */
 
 @layer base {
   :root {
-    /* Base colors - Professional news theme */
+    /* Base colors - Premium news theme */
     --background: 0 0% 100%;
-    --foreground: 217 19% 18%;
+    --foreground: 210 24% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 217 19% 18%;
+    --card-foreground: 210 24% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 217 19% 18%;
+    --popover-foreground: 210 24% 16%;
 
-    /* Primary - News brand blue */
-    --primary: 217 91% 15%;
+    /* Primary - Professional blue */
+    --primary: 210 100% 40%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 217 91% 20%;
+    --primary-hover: 210 100% 35%;
 
-    /* Secondary - Neutral grays */
+    /* Secondary - Elegant grays */
     --secondary: 210 16% 93%;
-    --secondary-foreground: 217 19% 18%;
+    --secondary-foreground: 210 24% 16%;
 
-    --muted: 210 16% 95%;
-    --muted-foreground: 215 14% 48%;
+    --muted: 210 16% 98%;
+    --muted-foreground: 215 16% 46%;
 
-    --accent: 210 16% 93%;
-    --accent-foreground: 217 19% 18%;
+    --accent: 210 16% 95%;
+    --accent-foreground: 210 24% 16%;
 
     /* Semantic colors */
     --destructive: 0 84% 60%;
@@ -43,28 +43,36 @@ All colors MUST be HSL. News-focused color palette and typography.
     --warning: 38 92% 50%;
     --warning-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 15%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 100% 40%;
 
-    --radius: 0.5rem;
+    --radius: 8px;
 
     /* News-specific colors */
     --breaking-news: 0 84% 60%;
-    --featured-news: 217 91% 15%;
-    --category-world: 0 84% 60%;
+    --featured-news: 210 100% 40%;
+    --urgent-news: 14 100% 57%;
+    --live-news: 142 71% 45%;
+    
+    /* Category colors - Professional palette */
+    --category-world: 210 100% 40%;
     --category-business: 142 71% 45%;
-    --category-tech: 217 91% 45%;
-    --category-sports: 38 92% 50%;
-    --category-entertainment: 271 91% 65%;
+    --category-tech: 260 100% 50%;
+    --category-sports: 120 100% 40%;
+    --category-entertainment: 330 100% 45%;
     --category-health: 195 100% 45%;
     --category-politics: 0 84% 50%;
-    --category-science: 142 76% 36%;
+    --category-science: 220 100% 45%;
+    --category-lifestyle: 280 100% 55%;
+    --category-education: 35 100% 50%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 15%), hsl(217 91% 25%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 16% 98%));
-    --gradient-news: linear-gradient(90deg, hsl(217 91% 15% / 0.05), hsl(217 91% 15% / 0.15));
+    /* Premium gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 40%), hsl(210 100% 50%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 16% 99%));
+    --gradient-news: linear-gradient(90deg, hsl(210 100% 40% / 0.05), hsl(210 100% 40% / 0.15));
+    --gradient-premium: linear-gradient(135deg, hsl(210 100% 40%), hsl(260 100% 50%));
+    --gradient-dark: linear-gradient(135deg, hsl(210 24% 16%), hsl(210 24% 20%));
 
     /* Typography */
     --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -98,46 +106,48 @@ All colors MUST be HSL. News-focused color palette and typography.
   }
 
   .dark {
-    /* Dark mode for news portal */
-    --background: 217 19% 9%;
+    /* Dark mode - Premium news portal */
+    --background: 210 24% 12%;
     --foreground: 210 16% 93%;
 
-    --card: 217 19% 12%;
+    --card: 210 24% 16%;
     --card-foreground: 210 16% 93%;
 
-    --popover: 217 19% 12%;
+    --popover: 210 24% 16%;
     --popover-foreground: 210 16% 93%;
 
-    --primary: 217 91% 55%;
-    --primary-foreground: 217 19% 9%;
-    --primary-hover: 217 91% 60%;
+    --primary: 210 100% 55%;
+    --primary-foreground: 210 24% 12%;
+    --primary-hover: 210 100% 60%;
 
-    --secondary: 217 19% 15%;
+    --secondary: 210 24% 20%;
     --secondary-foreground: 210 16% 93%;
 
-    --muted: 217 19% 15%;
-    --muted-foreground: 215 14% 65%;
+    --muted: 210 24% 20%;
+    --muted-foreground: 215 16% 65%;
 
-    --accent: 217 19% 15%;
+    --accent: 210 24% 20%;
     --accent-foreground: 210 16% 93%;
 
     --destructive: 0 84% 65%;
-    --destructive-foreground: 217 19% 9%;
+    --destructive-foreground: 210 24% 12%;
     
     --success: 142 71% 55%;
-    --success-foreground: 217 19% 9%;
+    --success-foreground: 210 24% 12%;
     
     --warning: 38 92% 60%;
-    --warning-foreground: 217 19% 9%;
+    --warning-foreground: 210 24% 12%;
 
-    --border: 217 19% 18%;
-    --input: 217 19% 18%;
-    --ring: 217 91% 55%;
+    --border: 210 24% 24%;
+    --input: 210 24% 24%;
+    --ring: 210 100% 55%;
 
     /* Dark mode gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 25%), hsl(217 91% 35%));
-    --gradient-card: linear-gradient(145deg, hsl(217 19% 12%), hsl(217 19% 15%));
-    --gradient-news: linear-gradient(90deg, hsl(217 91% 55% / 0.05), hsl(217 91% 55% / 0.15));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 40%), hsl(210 100% 50%));
+    --gradient-card: linear-gradient(145deg, hsl(210 24% 16%), hsl(210 24% 20%));
+    --gradient-news: linear-gradient(90deg, hsl(210 100% 55% / 0.05), hsl(210 100% 55% / 0.15));
+    --gradient-premium: linear-gradient(135deg, hsl(210 100% 50%), hsl(260 100% 60%));
+    --gradient-dark: linear-gradient(135deg, hsl(210 24% 20%), hsl(210 24% 24%));
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -178,8 +188,31 @@ All colors MUST be HSL. News-focused color palette and typography.
     -webkit-line-clamp: 3;
   }
 
+  .line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+
+  .hover-lift {
+    transition: transform 0.2s ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
   }
 
   @keyframes fadeIn {
@@ -191,5 +224,57 @@ All colors MUST be HSL. News-focused color palette and typography.
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Premium news portal specific styles */
+  .news-card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .news-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+  }
+
+  .breaking-pulse {
+    animation: breakingPulse 2s infinite;
+  }
+
+  @keyframes breakingPulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .text-gradient {
+    background: var(--gradient-premium);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

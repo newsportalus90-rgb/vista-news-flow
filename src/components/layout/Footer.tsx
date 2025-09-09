@@ -20,15 +20,22 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Description */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-hero">
-                <span className="text-lg font-bold text-primary-foreground">V</span>
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-premium">
+                <span className="text-xl font-bold text-white">N</span>
               </div>
-              <span className="text-xl font-bold text-primary">Vista News</span>
+              <div>
+                <span className="text-xl font-bold bg-gradient-premium bg-clip-text text-transparent">
+                  NewsStream
+                </span>
+                <div className="text-xs text-muted-foreground">
+                  Professional News Portal
+                </div>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              Your trusted source for global news, delivering accurate and timely information 
-              from around the world. Stay informed with Vista News.
+              Your premier destination for breaking news, in-depth analysis, and real-time updates 
+              from around the globe. Experience professional journalism with NewsStream.
             </p>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon">
@@ -124,7 +131,7 @@ export const Footer: React.FC = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Vista News. All rights reserved.
+            © 2024 NewsStream. All rights reserved.
           </p>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
             <Link to="/sitemap" className="text-sm text-muted-foreground hover:text-primary transition-colors">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { NewsletterPopup } from '@/components/ui/newsletter-popup';
 import { BreakingNewsTicker } from '@/components/news/BreakingNewsTicker';
 import { HeroSection } from '@/components/news/HeroSection';
 import { ArticleCard } from '@/components/news/ArticleCard';
@@ -244,6 +245,7 @@ const Index = () => {
       </main>
       
       <Footer />
+      <NewsletterPopup />
     </div>
   );
 };

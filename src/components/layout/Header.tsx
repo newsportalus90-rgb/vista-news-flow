@@ -12,8 +12,9 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { useAuth } from '@/contexts/AuthContext';
 import { signOut } from '@/lib/auth';
-import { Menu, Search, User, LogOut, Settings, Bookmark, X } from 'lucide-react';
+import { Menu, Search, User, LogOut, Settings, Bookmark, X, Bell } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 interface HeaderProps {
   onMenuToggle?: () => void;
@@ -55,11 +56,18 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
               <Menu className="h-5 w-5" />
             </Button>
             
-            <Link to="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-hero">
-                <span className="text-lg font-bold text-primary-foreground">V</span>
+            <Link to="/" className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-premium">
+                <span className="text-xl font-bold text-white">N</span>
               </div>
-              <span className="text-xl font-bold text-primary">Vista News</span>
+              <div className="hidden sm:block">
+                <span className="text-2xl font-bold bg-gradient-premium bg-clip-text text-transparent">
+                  NewsStream
+                </span>
+                <div className="text-xs text-muted-foreground font-medium">
+                  Professional News Portal
+                </div>
+              </div>
             </Link>
           </div>
 
@@ -80,6 +88,12 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
             <Link to="/sports" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Sports
             </Link>
+            <Link to="/entertainment" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+              Entertainment
+            </Link>
+            <Link to="/health" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+              Health
+            </Link>
           </nav>
 
           {/* Right section */}
@@ -89,7 +103,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
               {searchOpen ? (
                 <div className="flex items-center gap-2">
                   <Input
-                    placeholder="Search news..."
+                    placeholder="Search breaking news..."
                     className="w-64"
                     autoFocus
                   />
@@ -103,6 +117,14 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
                 </Button>
               )}
             </div>
+
+            {/* Notifications */}
+            <Button variant="ghost" size="icon">
+              <Bell className="h-4 w-4" />
+            </Button>
+
+            {/* Theme Toggle */}
+            <ThemeToggle />
 
             {/* User menu */}
             {user ? (
