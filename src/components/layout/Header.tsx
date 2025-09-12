@@ -42,9 +42,9 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex h-header items-center justify-between">
+        <div className="flex h-[4.5rem] items-center justify-between">
           {/* Left section */}
           <div className="flex items-center gap-4">
             <Button
@@ -56,43 +56,50 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
               <Menu className="h-5 w-5" />
             </Button>
             
-            <Link to="/" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-premium">
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-premium shadow-lg group-hover:shadow-xl transition-all">
                 <span className="text-xl font-bold text-white">N</span>
               </div>
               <div className="hidden sm:block">
-                <span className="text-2xl font-bold bg-gradient-premium bg-clip-text text-transparent">
+                <span className="text-2xl font-heading font-bold bg-gradient-premium bg-clip-text text-transparent">
                   NewsStream
                 </span>
-                <div className="text-xs text-muted-foreground font-medium">
-                  Professional News Portal
+                <div className="text-xs text-muted-foreground font-medium tracking-wide">
+                  Breaking News • Trusted Insights
                 </div>
               </div>
             </Link>
           </div>
 
           {/* Center section - Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <nav className="hidden md:flex items-center gap-8">
+            <Link to="/" className="text-sm font-medium text-foreground hover:text-primary transition-colors relative group">
               Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
-            <Link to="/world" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/world" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group">
               World
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
-            <Link to="/business" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/business" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group">
               Business
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
-            <Link to="/technology" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/technology" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group">
               Technology
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
-            <Link to="/sports" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/sports" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group">
               Sports
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
-            <Link to="/entertainment" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/entertainment" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group">
               Entertainment
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
-            <Link to="/health" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-              Health
+            <Link to="/opinion" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group">
+              Opinion
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
           </nav>
 

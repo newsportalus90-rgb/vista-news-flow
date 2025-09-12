@@ -20,19 +20,19 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Description */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-premium">
-                <span className="text-xl font-bold text-white">N</span>
-              </div>
-              <div>
-                <span className="text-xl font-bold bg-gradient-premium bg-clip-text text-transparent">
-                  NewsStream
-                </span>
-                <div className="text-xs text-muted-foreground">
-                  Professional News Portal
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-premium shadow-lg">
+                  <span className="text-xl font-bold text-white">N</span>
+                </div>
+                <div>
+                  <span className="text-2xl font-heading font-bold bg-gradient-premium bg-clip-text text-transparent">
+                    NewsStream
+                  </span>
+                  <div className="text-xs text-muted-foreground font-medium">
+                    Breaking News • Trusted Insights
+                  </div>
                 </div>
               </div>
-            </div>
             <p className="text-sm text-muted-foreground">
               Your premier destination for breaking news, in-depth analysis, and real-time updates 
               from around the globe. Experience professional journalism with NewsStream.
@@ -113,7 +113,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                news@vistanews.com
+                news@newsstream.com
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4" />
