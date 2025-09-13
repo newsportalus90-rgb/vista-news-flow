@@ -36,7 +36,7 @@ export const FeaturedCarousel: React.FC<FeaturedCarouselProps> = ({ articles }) 
   const currentArticle = articles[currentIndex];
 
   return (
-    <div className="relative h-[500px] md:h-[650px] overflow-hidden rounded-2xl bg-card shadow-elegant hover-glow">
+    <div className="relative h-[400px] sm:h-[500px] md:h-[650px] overflow-hidden rounded-2xl bg-card shadow-elegant hover-glow">
       {/* Background Image */}
       <div className="absolute inset-0">
         {currentArticle.featured_image && (
@@ -87,34 +87,34 @@ export const FeaturedCarousel: React.FC<FeaturedCarouselProps> = ({ articles }) 
               to={`/article/${currentArticle.slug}`}
               className="block group"
             >
-              <h1 className="text-3xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight group-hover:text-gray-200 transition-all duration-300">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 md:mb-6 leading-tight group-hover:text-gray-200 transition-all duration-300">
                 {currentArticle.title}
               </h1>
               {currentArticle.excerpt && (
-                <p className="text-xl text-gray-200 mb-8 line-clamp-3 leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 md:mb-8 line-clamp-2 md:line-clamp-3 leading-relaxed">
                   {currentArticle.excerpt}
                 </p>
               )}
             </Link>
 
             {/* Meta Information */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4 text-gray-200">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-2 sm:gap-4 text-sm sm:text-base text-gray-200">
                 <span className="font-medium">
                   {currentArticle.author?.full_name}
                 </span>
-                <span>•</span>
-                <span>
+                <span className="hidden sm:inline">•</span>
+                <span className="text-xs sm:text-sm">
                   {format(new Date(currentArticle.published_at || currentArticle.created_at), 'MMM dd, yyyy')}
                 </span>
-                <span>•</span>
-                <span>{currentArticle.views_count} views</span>
+                <span className="hidden sm:inline">•</span>
+                <span className="text-xs sm:text-sm">{currentArticle.views_count} views</span>
               </div>
 
               <Button 
                 asChild
                 size="lg"
-                className="bg-white text-foreground hover:bg-white/95 shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-3 text-base font-semibold"
+                className="bg-white text-foreground hover:bg-white/95 shadow-lg hover:shadow-xl transition-all duration-300 px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-semibold w-fit"
               >
                 <Link to={`/article/${currentArticle.slug}`}>
                   Read Full Story →

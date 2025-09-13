@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/integrations/supabase/client';
 import { 
   BarChart3, 
@@ -30,7 +29,6 @@ interface DashboardStats {
 }
 
 export const AdminDashboard: React.FC = () => {
-  const { user, profile } = useAuth();
   const [stats, setStats] = useState<DashboardStats>({
     totalArticles: 0,
     totalViews: 0,
@@ -99,15 +97,21 @@ export const AdminDashboard: React.FC = () => {
     fetchDashboardData();
   }, []);
 
-  if (!user || !profile?.role || !['admin', 'editor', 'author'].includes(profile.role)) {
+  if (loading) {
     return (
       <div className="container mx-auto px-4 py-8">
-        <Card>
-          <CardContent className="p-8 text-center">
-            <h1 className="text-2xl font-bold mb-4">Access Denied</h1>
-            <p className="text-muted-foreground">You don't have permission to access the admin panel.</p>
-          </CardContent>
-        </Card>
+        <div className="flex items-center justify-center h-96">
+          <div className="animate-pulse space-y-6 max-w-4xl mx-auto">
+            <div className="h-12 bg-muted rounded-lg"></div>
+            <div className="h-64 bg-muted rounded-lg"></div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="h-32 bg-muted rounded-lg"></div>
+              <div className="h-32 bg-muted rounded-lg"></div>
+              <div className="h-32 bg-muted rounded-lg"></div>
+              <div className="h-32 bg-muted rounded-lg"></div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

@@ -1,73 +1,134 @@
-# Welcome to your Lovable project
+# Vista News Flow
 
-## Project info
+A modern, responsive news portal built with React, Vite, and Supabase. Features a clean, professional design with real-time news updates and an intuitive admin panel.
 
-**URL**: https://lovable.dev/projects/3cd4fefe-9c0d-447d-9eac-7c94ba3b4718
+## 🚀 Live Demo
 
-## How can I edit this code?
+**Production URL**: https://vista-news-flow.vercel.app/
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- **Modern Design**: Clean, professional UI with a beautiful blue-to-purple gradient color scheme
+- **Fully Responsive**: Optimized for all devices (mobile, tablet, desktop)
+- **Admin Panel**: Easy-to-use content management system (accessible at `/admin`)
+- **Real-time Updates**: Powered by Supabase for live data synchronization
+- **SEO Optimized**: Comprehensive meta tags and structured data
+- **Fast Performance**: Built with Vite for lightning-fast development and builds
+- **Accessible**: WCAG compliant design with proper contrast ratios
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3cd4fefe-9c0d-447d-9eac-7c94ba3b4718) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **Backend**: Supabase (Database + Auth)
+- **State Management**: TanStack Query (React Query)
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Fonts**: Inter + Playfair Display
 
-**Use your preferred IDE**
+## 🎨 Design System
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Vista News Flow uses a modern, professional color palette:
+- **Primary**: Blue (#3B82F6) to Purple (#8B5CF6) gradient
+- **Typography**: Inter for body text, Playfair Display for headings
+- **Components**: shadcn/ui for consistent, accessible UI elements
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Getting Started
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js 18+ and npm
+- Supabase account (for backend services)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Clone the repository
+git clone https://github.com/newsportalus90-rgb/vista-news-flow.git
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Navigate to project directory
+cd vista-news-flow
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Environment Setup
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Create a `.env` file in the root directory:
 
-**Use GitHub Codespaces**
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_PUBLISHABLE_KEY=your_supabase_anon_key
+VITE_SUPABASE_PROJECT_ID=your_project_id
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📱 Admin Panel
 
-## What technologies are used for this project?
+Access the admin panel at `/admin` to manage:
+- Articles and news posts
+- Categories and tags
+- Media library
+- User management
+- System settings
 
-This project is built with:
+No authentication required - simplified for easy access.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🌐 Deployment
 
-## How can I deploy this project?
+### Vercel (Recommended)
 
-Simply open [Lovable](https://lovable.dev/projects/3cd4fefe-9c0d-447d-9eac-7c94ba3b4718) and click on Share -> Publish.
+```bash
+# Build the project
+npm run build
 
-## Can I connect a custom domain to my Lovable project?
+# Deploy to Vercel
+npx vercel --prod
+```
 
-Yes, you can!
+### Other Platforms
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The project can be deployed to any static hosting service:
+- Netlify
+- GitHub Pages
+- AWS S3 + CloudFront
+- Firebase Hosting
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📁 Project Structure
+
+```
+vista-news-flow/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── pages/          # Page components
+│   ├── hooks/          # Custom React hooks
+│   ├── lib/            # Utility functions
+│   ├── types/          # TypeScript type definitions
+│   └── integrations/   # External service integrations
+├── supabase/           # Database migrations and config
+└── ...config files
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [shadcn/ui](https://ui.shadcn.com/) for beautiful, accessible components
+- Powered by [Supabase](https://supabase.com/) for backend services
+- Icons by [Lucide](https://lucide.dev/)
+- Fonts from [Google Fonts](https://fonts.google.com/)
