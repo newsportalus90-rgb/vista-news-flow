@@ -36,17 +36,18 @@ export const FeaturedCarousel: React.FC<FeaturedCarouselProps> = ({ articles }) 
   const currentArticle = articles[currentIndex];
 
   return (
-    <div className="relative h-[500px] md:h-[600px] overflow-hidden rounded-xl bg-card">
+    <div className="relative h-[500px] md:h-[650px] overflow-hidden rounded-2xl bg-card shadow-elegant hover-glow">
       {/* Background Image */}
       <div className="absolute inset-0">
         {currentArticle.featured_image && (
           <img
             src={currentArticle.featured_image}
             alt={currentArticle.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
           />
         )}
         <div className="absolute inset-0 hero-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
       </div>
 
       {/* Content Overlay */}
@@ -56,25 +57,25 @@ export const FeaturedCarousel: React.FC<FeaturedCarouselProps> = ({ articles }) 
             {/* Badges */}
             <div className="flex items-center gap-3 mb-4">
               {currentArticle.is_featured && (
-                <Badge className="bg-featured-news text-white">
-                  FEATURED
+                <Badge className="bg-featured-news text-white px-4 py-1.5 text-xs font-bold tracking-wider">
+                  ⭐ FEATURED
                 </Badge>
               )}
               {currentArticle.is_breaking && (
-                <Badge className="breaking-banner breaking-pulse">
-                  BREAKING
+                <Badge className="breaking-banner breaking-pulse px-4 py-1.5 text-xs font-bold tracking-wider">
+                  🔥 BREAKING
                 </Badge>
               )}
               {currentArticle.category && (
                 <Badge 
                   variant="secondary"
-                  className="bg-white/20 text-white backdrop-blur-sm"
+                  className="glass-effect text-white px-3 py-1.5 text-xs font-semibold"
                 >
-                  {currentArticle.category.name}
+                  {currentArticle.category.name.toUpperCase()}
                 </Badge>
               )}
               {currentArticle.featured_video && (
-                <Badge className="bg-white/20 text-white backdrop-blur-sm flex items-center gap-1">
+                <Badge className="glass-effect text-white flex items-center gap-2 px-3 py-1.5 text-xs font-semibold">
                   <Play className="h-3 w-3" />
                   VIDEO
                 </Badge>
@@ -86,11 +87,11 @@ export const FeaturedCarousel: React.FC<FeaturedCarouselProps> = ({ articles }) 
               to={`/article/${currentArticle.slug}`}
               className="block group"
             >
-              <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4 leading-tight group-hover:text-gray-200 transition-colors">
+              <h1 className="text-3xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight group-hover:text-gray-200 transition-all duration-300">
                 {currentArticle.title}
               </h1>
               {currentArticle.excerpt && (
-                <p className="text-lg text-gray-200 mb-6 line-clamp-3">
+                <p className="text-xl text-gray-200 mb-8 line-clamp-3 leading-relaxed">
                   {currentArticle.excerpt}
                 </p>
               )}
@@ -112,10 +113,11 @@ export const FeaturedCarousel: React.FC<FeaturedCarouselProps> = ({ articles }) 
 
               <Button 
                 asChild
-                className="bg-white text-foreground hover:bg-white/90"
+                size="lg"
+                className="bg-white text-foreground hover:bg-white/95 shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-3 text-base font-semibold"
               >
                 <Link to={`/article/${currentArticle.slug}`}>
-                  Read Full Story
+                  Read Full Story →
                 </Link>
               </Button>
             </div>
@@ -129,19 +131,19 @@ export const FeaturedCarousel: React.FC<FeaturedCarouselProps> = ({ articles }) 
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm"
+            className="absolute left-6 top-1/2 -translate-y-1/2 glass-effect text-white hover:bg-white/20 transition-all duration-300 h-12 w-12 rounded-full"
             onClick={prevSlide}
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-5 w-5" />
           </Button>
           
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm"
+            className="absolute right-6 top-1/2 -translate-y-1/2 glass-effect text-white hover:bg-white/20 transition-all duration-300 h-12 w-12 rounded-full"
             onClick={nextSlide}
           >
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-5 w-5" />
           </Button>
         </>
       )}

@@ -4,40 +4,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* NewsStream Design System - Professional BBC/Hindustan Times inspired design */
+/* NewsStream Design System - Modern Premium News Portal */
 
 @layer base {
   :root {
-    /* Base colors - Premium professional news theme */
+    /* Modern Color Palette - Professional & Fresh */
     --background: 0 0% 100%;
-    --foreground: 210 24% 16%;
+    --foreground: 220 26% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 24% 16%;
+    --card-foreground: 220 26% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 24% 16%;
+    --popover-foreground: 220 26% 14%;
 
-    /* Primary - BBC/Reuters blue */
-    --primary: 215 84% 40%;
+    /* Primary - Modern Blue with Energy */
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 98%;
-    --primary-hover: 215 84% 35%;
+    --primary-hover: 221 83% 48%;
 
-    /* Secondary - Professional grays */
-    --secondary: 210 16% 93%;
-    --secondary-foreground: 210 24% 16%;
+    /* Secondary - Elegant Neutrals */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 26% 14%;
 
-    --muted: 210 16% 98%;
-    --muted-foreground: 215 16% 46%;
+    --muted: 220 14% 98%;
+    --muted-foreground: 220 16% 48%;
 
-    --accent: 210 16% 95%;
-    --accent-foreground: 210 24% 16%;
+    --accent: 220 14% 97%;
+    --accent-foreground: 220 26% 14%;
 
-    /* Semantic colors */
+    /* Semantic colors - Fresh & Modern */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
-    --success: 142 71% 45%;
+    --success: 142 76% 36%;
     --success-foreground: 0 0% 98%;
     
     --warning: 38 92% 50%;
@@ -45,16 +45,16 @@
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 215 84% 40%;
+    --ring: 221 83% 53%;
 
-    --radius: 8px;
+    --radius: 12px;
 
-    /* News-specific colors - Premium palette */
+    /* News-specific colors - Modern & Impactful */
     --breaking-news: 0 84% 55%;
-    --featured-news: 215 84% 40%;
-    --urgent-news: 14 100% 57%;
-    --live-news: 142 71% 45%;
-    --exclusive-news: 280 100% 45%;
+    --featured-news: 221 83% 53%;
+    --urgent-news: 25 95% 53%;
+    --live-news: 142 76% 36%;
+    --exclusive-news: 271 81% 56%;
     
     /* Category colors - Professional BBC-inspired */
     --category-world: 215 84% 40%;
@@ -69,13 +69,14 @@
     --category-education: 35 84% 50%;
     --category-opinion: 45 84% 45%;
 
-    /* Premium gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(215 84% 40%), hsl(215 84% 50%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 16% 99%));
-    --gradient-news: linear-gradient(90deg, hsl(215 84% 40% / 0.05), hsl(215 84% 40% / 0.15));
-    --gradient-premium: linear-gradient(135deg, hsl(215 84% 40%), hsl(260 84% 50%));
-    --gradient-dark: linear-gradient(135deg, hsl(210 24% 16%), hsl(210 24% 20%));
-    --gradient-breaking: linear-gradient(135deg, hsl(0 84% 55%), hsl(14 100% 57%));
+    /* Modern Gradients - Eye-catching & Professional */
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53%), hsl(271 81% 56%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 99%));
+    --gradient-news: linear-gradient(90deg, hsl(221 83% 53% / 0.03), hsl(221 83% 53% / 0.08));
+    --gradient-premium: linear-gradient(135deg, hsl(221 83% 53%), hsl(271 81% 56%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 76% 36%), hsl(25 95% 53%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 26% 14%), hsl(220 26% 18%));
+    --gradient-breaking: linear-gradient(135deg, hsl(0 84% 55%), hsl(25 95% 53%));
 
     /* Typography - Professional news styling */
     --font-heading: 'Playfair Display', Georgia, serif;
@@ -104,28 +105,28 @@
   }
 
   .dark {
-    /* Dark mode - Professional news portal */
-    --background: 210 24% 6%;
-    --foreground: 210 16% 93%;
+    /* Dark mode - Modern & Sophisticated */
+    --background: 220 26% 6%;
+    --foreground: 220 14% 94%;
 
-    --card: 210 24% 10%;
-    --card-foreground: 210 16% 93%;
+    --card: 220 26% 9%;
+    --card-foreground: 220 14% 94%;
 
-    --popover: 210 24% 10%;
-    --popover-foreground: 210 16% 93%;
+    --popover: 220 26% 9%;
+    --popover-foreground: 220 14% 94%;
 
-    --primary: 215 84% 55%;
-    --primary-foreground: 210 24% 6%;
-    --primary-hover: 215 84% 60%;
+    --primary: 221 83% 60%;
+    --primary-foreground: 220 26% 6%;
+    --primary-hover: 221 83% 65%;
 
-    --secondary: 210 24% 16%;
-    --secondary-foreground: 210 16% 93%;
+    --secondary: 220 26% 14%;
+    --secondary-foreground: 220 14% 94%;
 
-    --muted: 210 24% 16%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 220 26% 14%;
+    --muted-foreground: 220 16% 68%;
 
-    --accent: 210 24% 16%;
-    --accent-foreground: 210 16% 93%;
+    --accent: 220 26% 14%;
+    --accent-foreground: 220 14% 94%;
 
     --destructive: 0 84% 65%;
     --destructive-foreground: 210 24% 6%;
@@ -136,17 +137,18 @@
     --warning: 38 92% 60%;
     --warning-foreground: 210 24% 6%;
 
-    --border: 210 24% 20%;
-    --input: 210 24% 20%;
-    --ring: 215 84% 55%;
+    --border: 220 26% 18%;
+    --input: 220 26% 18%;
+    --ring: 221 83% 60%;
 
-    /* Dark mode gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(215 84% 40%), hsl(215 84% 50%));
-    --gradient-card: linear-gradient(145deg, hsl(210 24% 10%), hsl(210 24% 16%));
-    --gradient-news: linear-gradient(90deg, hsl(215 84% 55% / 0.05), hsl(215 84% 55% / 0.15));
-    --gradient-premium: linear-gradient(135deg, hsl(215 84% 50%), hsl(260 84% 60%));
-    --gradient-dark: linear-gradient(135deg, hsl(210 24% 16%), hsl(210 24% 20%));
-    --gradient-breaking: linear-gradient(135deg, hsl(0 84% 55%), hsl(14 100% 57%));
+    /* Dark mode gradients - Rich & Dynamic */
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53%), hsl(271 81% 56%));
+    --gradient-card: linear-gradient(145deg, hsl(220 26% 9%), hsl(220 26% 14%));
+    --gradient-news: linear-gradient(90deg, hsl(221 83% 60% / 0.05), hsl(221 83% 60% / 0.12));
+    --gradient-premium: linear-gradient(135deg, hsl(221 83% 60%), hsl(271 81% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 76% 45%), hsl(25 95% 60%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 26% 14%), hsl(220 26% 18%));
+    --gradient-breaking: linear-gradient(135deg, hsl(0 84% 55%), hsl(25 95% 53%));
 
     /* Dark sidebar */
     --sidebar-background: 210 24% 8%;
@@ -304,31 +306,37 @@
     background-clip: text;
   }
 
-  /* Professional news components */
+  /* Modern News Components */
   .article-grid {
-    @apply grid gap-6;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    @apply grid gap-8;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 
   .trending-list {
-    @apply space-y-4;
+    @apply space-y-6;
   }
 
   .category-badge {
-    @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+    @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .breaking-banner {
     background: var(--gradient-breaking);
-    @apply text-white;
+    @apply text-white font-bold animate-pulse;
   }
 
   .hero-overlay {
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.6) 100%
+      rgba(0, 0, 0, 0.7) 100%
     );
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
   }
 
   /* Responsive typography */
@@ -366,7 +374,7 @@
     }
   }
 
-  /* Enhanced shadows for cards */
+  /* Enhanced Modern Shadows */
   .shadow-professional {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
                 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -375,5 +383,25 @@
   .shadow-professional-lg {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
                 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .shadow-elegant {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .shadow-glass {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Modern Hover Effects */
+  .hover-glow {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
   }
 }

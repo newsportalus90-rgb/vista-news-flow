@@ -23,50 +23,50 @@ export const CategorySection: React.FC<CategorySectionProps> = ({
   const remainingArticles = articles.slice(1, 4);
 
   return (
-    <section className="py-8">
+    <section className="py-12">
       {/* Section Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center gap-4">
           <div 
-            className="w-1 h-8 rounded-full"
+            className="w-1.5 h-12 rounded-full shadow-sm"
             style={{ backgroundColor: category.color }}
           />
           <div>
-            <h2 className="text-2xl md:text-3xl font-heading font-bold">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold tracking-tight">
               {category.name}
             </h2>
             {category.description && (
-              <p className="text-muted-foreground text-sm mt-1">
+              <p className="text-muted-foreground text-base mt-2">
                 {category.description}
               </p>
             )}
           </div>
           <Badge 
             style={{ backgroundColor: category.color }}
-            className="text-white ml-2"
+            className="text-white ml-4 px-3 py-1.5 text-sm font-semibold"
           >
-            {articles.length}
+            {articles.length} Articles
           </Badge>
         </div>
         
-        <Button variant="ghost" className="text-primary hover:text-primary/80" asChild>
+        <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white transition-all duration-300" asChild>
           <Link to={`/category/${category.slug}`}>
-            View All
-            <ArrowRight className="h-4 w-4 ml-1" />
+            View All Stories
+            <ArrowRight className="h-4 w-4 ml-2" />
           </Link>
         </Button>
       </div>
 
       {/* Articles Grid */}
       {featured ? (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Featured Article - Large */}
           <div className="lg:col-span-2">
             <ArticleCard article={featuredArticle} variant="featured" />
           </div>
           
           {/* Sidebar Articles */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             {remainingArticles.map((article) => (
               <ArticleCard 
                 key={article.id} 
@@ -77,7 +77,7 @@ export const CategorySection: React.FC<CategorySectionProps> = ({
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.slice(0, 6).map((article) => (
             <ArticleCard key={article.id} article={article} />
           ))}
@@ -86,8 +86,13 @@ export const CategorySection: React.FC<CategorySectionProps> = ({
 
       {/* Load More */}
       {articles.length > 6 && (
-        <div className="text-center mt-8">
-          <Button variant="outline" asChild>
+        <div className="text-center mt-12">
+          <Button 
+            variant="outline" 
+            size="lg"
+            className="px-8 py-3 text-base font-semibold hover:bg-primary hover:text-white transition-all duration-300"
+            asChild
+          >
             <Link to={`/category/${category.slug}`}>
               Load More {category.name} Articles
             </Link>

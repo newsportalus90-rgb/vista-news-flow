@@ -131,29 +131,29 @@ const Index = () => {
       
       {/* Featured Carousel */}
       {featuredNews.length > 0 && (
-        <section className="container mx-auto px-4 py-8">
+        <section className="container mx-auto px-6 py-12">
           <FeaturedCarousel articles={featuredNews} />
         </section>
       )}
       
-      <main className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <main className="container mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
-          <div className="lg:col-span-2 space-y-12">
+          <div className="lg:col-span-2 space-y-16">
             {/* Category Sections */}
             {Object.entries(newsByCategory).map(([categorySlug, articles], index) => {
               const category = categories.find(cat => cat.slug === categorySlug);
               if (!category || articles.length === 0) return null;
 
               return (
-                <div key={category.id}>
+                <div key={category.id} className="scroll-mt-24">
                   <CategorySection 
                     category={category} 
                     articles={articles}
                     featured={index === 0} // First category gets featured treatment
                   />
                   {index < Object.keys(newsByCategory).length - 1 && (
-                    <Separator className="mt-12" />
+                    <Separator className="mt-16 bg-gradient-to-r from-transparent via-border to-transparent" />
                   )}
                 </div>
               );
@@ -162,25 +162,27 @@ const Index = () => {
             {/* Latest News Section */}
             {latestNews.length > 0 && (
               <>
-                <Separator />
-                <CategorySection 
-                  category={{
-                    id: 'latest',
-                    name: 'Latest News',
-                    slug: 'latest',
-                    description: 'Stay updated with the most recent developments',
-                    color: '#3B82F6',
-                    created_at: '',
-                    updated_at: ''
-                  }}
-                  articles={latestNews}
-                />
+                <Separator className="bg-gradient-to-r from-transparent via-border to-transparent" />
+                <div className="scroll-mt-24">
+                  <CategorySection 
+                    category={{
+                      id: 'latest',
+                      name: 'Latest News',
+                      slug: 'latest',
+                      description: 'Stay updated with the most recent developments around the world',
+                      color: '#3B82F6',
+                      created_at: '',
+                      updated_at: ''
+                    }}
+                    articles={latestNews}
+                  />
+                </div>
               </>
             )}
           </div>
 
           {/* Sidebar */}
-          <div className="lg:sticky lg:top-24 lg:self-start">
+          <div className="lg:sticky lg:top-28 lg:self-start">
             <TrendingSidebar 
               trendingArticles={trendingNews}
               recentArticles={latestNews.slice(0, 8)}
